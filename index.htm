@@ -5,14 +5,28 @@
     <style>
         body {
         font-family: 'Marcellus';font-size: 22px;
+        color:lightgrey;
             }
     </style>
 </head>
-<h1 style="color:lightgrey;font-size:60px;text-align:center"> D&D Travel Application </h1>
+<h1 style="font-size:60px;text-align:center"> D&D Travel Application </h1>
 <hr>
 <body>
-<h2 style="color:lightgrey">I luv uuuu</h2>
-<p style="color:lightgrey">I'm hosted with GitHub Pages.</p>
+<!-- Input Movement Speed -->
+<h2>Party Travel Speed</h2>
+
+  <input type="radio" id="slow"> Slow
+  <input type="radio" id="normal"> Normal
+  <input type="radio" id="fast"> Fast 
+
+  <button id="SetPace"
+  onclick="getElementById('speedchar').innerHTML='slow'" style="font-family: 'Marcellus'">Set Pace
+  </button>
+
+<div id="speedchar"></div>
+
+<p>I'm hosted with GitHub Pages.</p>
+
 </body>
 <style>
         body  {
@@ -20,4 +34,9 @@
           background-color: #cccccc;
         }
  </style>
+ <script>
+function myFunction() {
+  document.write(1);
+}
+ </script>
 </html>
