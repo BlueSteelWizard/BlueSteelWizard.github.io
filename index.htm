@@ -20,7 +20,7 @@
   <input type="radio" id="fast"> Fast 
 
   <button id="SetPace"
-  onclick="myFunction()" style="font-family: 'Marcellus'">Set Pace
+  onclick="SetPace()" style="font-family: 'Marcellus'">Set Pace
   </button>
 
 <div id="speedchar"></div>
@@ -34,22 +34,28 @@
           background-color: #cccccc;
         }
  </style>
+
+ <!-- Here are the Javascripts -->
  <script>
-function myFunction() {
-try{
-  var s = document.getElementById("slow").checked;
+function SetPace() {
+try
+{
+  var s = document.getElementById("slow").checked; 
   var n = document.getElementById("normal").checked;
   var f= document.getElementById("fast").checked;
   if (s == true){
-  document.getElementById("speedchar").innerHTML = "Slow";
+  document.getElementById("speedchar").innerHTML = 
+  "Perception Party/(Hostile): +4/(-4) Navigation: +4 Forage: +0 Speed: 0.6";
   }
   if (n == true){
-  document.getElementById("speedchar").innerHTML = "Normal";
+  document.getElementById("speedchar").innerHTML = 
+  "Perception Party/(Hostile): +0/(-0) Navigation: +0 Forage: -4 Speed: 1";
   }
   if (f == true){
-  document.getElementById("speedchar").innerHTML = "Fast";
+  document.getElementById("speedchar").innerHTML = 
+  "Perception Party/(Hostile): -4/(+4) Navigation: -4 Forage: Cannot Speed: 1.4";
   }
-  }
+}
   finally
   {
   	document.getElementById("slow").checked = false;
