@@ -20,7 +20,7 @@
   <input type="radio" id="fast"> Fast 
 
   <button id="SetPace"
-  onclick="getElementById('speedchar').innerHTML='slow'" style="font-family: 'Marcellus'">Set Pace
+  onclick="myFunction()" style="font-family: 'Marcellus'">Set Pace
   </button>
 
 <div id="speedchar"></div>
@@ -36,7 +36,26 @@
  </style>
  <script>
 function myFunction() {
-  document.write(1);
+try{
+  var s = document.getElementById("slow").checked;
+  var n = document.getElementById("normal").checked;
+  var f= document.getElementById("fast").checked;
+  if (s == true){
+  document.getElementById("speedchar").innerHTML = "Slow";
+  }
+  if (n == true){
+  document.getElementById("speedchar").innerHTML = "Normal";
+  }
+  if (f == true){
+  document.getElementById("speedchar").innerHTML = "Fast";
+  }
+  }
+  finally
+  {
+  	document.getElementById("slow").checked = false;
+	  document.getElementById("normal").checked = false;
+ 		document.getElementById("fast").checked = false;
+  }
 }
  </script>
 </html>
